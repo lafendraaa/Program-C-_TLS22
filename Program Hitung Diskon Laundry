@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float harga_1kg = 5000,berat_laundry,harga_laundry,
+            diskon1 = 0.98, diskon2 = 0.95, diskon3 = 0.9;
+    
+    cout<<"Masukkan berat laundry : ";
+    cin>>berat_laundry;
+    
+    harga_laundry = berat_laundry*harga_1kg;
+    
+    cout<<"Harga awal laundry adalah : "<<harga_laundry<<endl;
+    
+    if (0<berat_laundry && berat_laundry<3)
+    {   cout<<"Anda tidak mendapat diskon\n";}
+        
+        else if (3<=berat_laundry && berat_laundry<5)
+    {   harga_laundry = harga_laundry*diskon1;
+        cout<<"Anda mendapat diskon sebesar 2%\n";}
+            
+        else if (5<=berat_laundry && berat_laundry<10)
+    {   harga_laundry = harga_laundry*diskon2;
+        cout<<"Anda mendapat diskon sebesar 5%\n";}
+        
+        else if(berat_laundry>=10)
+    {   harga_laundry = harga_laundry*diskon3;
+        cout<<"Anda mendapat diskon sebesar 10%\n";}
+           
+    cout << "Total harga laundry adalah : "<<harga_laundry<<endl;
+    return 0;
+}
